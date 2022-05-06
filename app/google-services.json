@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "282646618008",
+    "project_id": "short-video-6afe5",
+    "storage_bucket": "short-video-6afe5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:282646618008:android:1691a74f82b1c9f041d5ed",
+        "android_client_info": {
+          "package_name": "com.bitaam.shortvideo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "282646618008-kqh92gi92mvc2qj32kqigtgmcgo9fvgg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bitaam.shortvideo",
+            "certificate_hash": "edfdedbe3e55e3dac62bebe4f856746e3531b60a"
+          }
+        },
+        {
+          "client_id": "282646618008-b2qscldudgec0391vrpnna6jp8ggcdm6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKDI9NBCjISkYcZNsmKWPfBmkcX9xJ6_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "282646618008-b2qscldudgec0391vrpnna6jp8ggcdm6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

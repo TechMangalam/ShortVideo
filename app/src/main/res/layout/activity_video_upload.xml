@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VideoUploadActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_create_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimaryVariant"
+        app:title="Upload Video"
+        app:titleTextColor="@android:color/white" />
+
+    <ScrollView
+        android:layout_below="@id/toolbar_create_post"
+        android:scrollbars="vertical"
+        android:layout_above="@id/bottom_tools_rtl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/title_input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:hint="Type your video title here..."
+                app:boxCornerRadiusBottomEnd="14dp"
+                android:padding="5dp"
+                app:endIconMode="clear_text"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:startIconDrawable="@drawable/ic_baseline_edit_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/title_input_field"
+                    android:layout_width="match_parent"
+                    android:scrollbars="vertical"
+                    android:maxLines="2"
+                    android:textSize="18sp"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/video_tag_input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:hint="Tag here..."
+                app:boxCornerRadiusBottomEnd="14dp"
+                android:padding="5dp"
+                app:endIconMode="clear_text"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                android:layout_below="@id/title_input_layout"
+                app:startIconDrawable="@drawable/ic_baseline_edit_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tag_input_field"
+                    android:layout_width="match_parent"
+                    android:scrollbars="vertical"
+                    android:maxLines="1"
+                    android:textSize="18sp"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/exoplayer_post"
+                android:visibility="gone"
+                android:layout_below="@id/video_tag_input_layout"
+                android:layout_marginHorizontal="5dp"
+                app:surface_type="texture_view"
+                app:show_buffering="always"
+                app:buffered_color="@color/teal_200"
+                app:repeat_toggle_modes="none"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"/>
+
+            <ImageButton
+                android:id="@+id/removeAttachedVideoBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/video_tag_input_layout"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/custom_bordered_ripple"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_delete_forever_24"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottom_tools_rtl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/attachment_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+
+
+            <ImageButton
+                android:id="@+id/cameraAttachImageBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_bordered_ripple"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_photo_camera_24" />
+
+            <ImageButton
+                android:id="@+id/videoAttachImageBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_bordered_ripple"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_video_library_24" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/uploadVideoBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/custom_bordered_ripple"
+                android:clickable="false"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_send_24" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
